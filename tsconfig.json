@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "es",
+    "target": "ES5",
+    "module": "ES6",
+    "declaration": true,
+    "lib": ["ES5"],
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules"]
+}
