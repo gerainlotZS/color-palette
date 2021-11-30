@@ -1,4 +1,4 @@
-import Color from "color";
+const Color = require("color");
 import { ColorFormats, ColorFormat } from "./types";
 
 /**
@@ -23,8 +23,7 @@ function getRgbStr(color: string) {
  * @returns "hex" | "rgb" | "hsl"
  */
 function getFormat(format: ColorFormat) {
-  const formats: string[] = [...ColorFormats];
-  if (!format || formats.indexOf(format) < 0) {
+  if (!format || ColorFormats.indexOf(format) < 0) {
     return "hex";
   }
   return format;
@@ -37,7 +36,7 @@ function getFormat(format: ColorFormat) {
  * @param {"hex" | "rgb" | "hsl"} format;
  * @returns string
  */
-function getColorString(color: Color<string>, format: ColorFormat) {
+function getColorString(color: typeof Color, format: ColorFormat) {
   const innerFormat = getFormat(format);
 
   if (innerFormat === "hex") {

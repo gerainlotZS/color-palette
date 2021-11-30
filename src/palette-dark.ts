@@ -1,4 +1,4 @@
-import Color from "color";
+const Color = require('color');
 import { palette } from "./palette";
 import { ColorFormat } from "./types";
 import { getColorString } from "./utils";
