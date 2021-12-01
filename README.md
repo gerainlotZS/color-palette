@@ -7,11 +7,11 @@ Color Utils for UI Library
 ## Usage
 
 ```bash
-npm i @gerainlot-ui/color-palette
+npm i @gerainlot/color-palette
 ```
 
 ```js
-import { generate, presetColor } from "@gerainlot-ui/color-palette";
+import { generate, presetColor } from "@gerainlot/color-palette";
 console.log(generate("#123456"));
 console.log(presetColor);
 // {
