@@ -1,4 +1,4 @@
-import { generate, getPresetColors, getRgbStr } from "../src";
+import { generate, getPresetColors, getRgbStr } from "../";
 
 const presetColors = getPresetColors();
 

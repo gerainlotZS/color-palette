@@ -1,5 +1,4 @@
 import { generate } from "./generate";
-import { getRgbStr } from "./utils";
 import { COMMON_COLOR, IPresetColor } from "./types";
 
 /**
@@ -40,4 +39,4 @@ function getPresetColors() {
   return presetColors;
 }
 
-export { generate, getPresetColors, getRgbStr };
+export { getPresetColors };

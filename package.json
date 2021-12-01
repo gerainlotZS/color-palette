@@ -7,8 +7,8 @@
     "Color",
     "utils"
   ],
-  "main": "dist/color-palette.cjs.js",
-  "module": "dist/color-palette.es.js",
+  "main": "dist/color-palette.js",
+  "module": "dist/color-palette.esm.js",
   "browser": "dist/color-palette.js",
   "types": "./dist/index.d.ts",
   "author": "zhangshuai<15806504132@163.com>",
@@ -39,6 +39,7 @@
     "rollup": "^2.60.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
@@ -58,6 +59,9 @@
     "publish:patch": "npm run patch && npm publish --access=public"
   },
   "files": [
-    "dist/*.js"
+    "dist",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
   ]
 }

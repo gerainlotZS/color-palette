@@ -7,6 +7,7 @@ import replace from "@rollup/plugin-replace";
 import { terser } from "rollup-plugin-terser";
 import pluginTypescript from "rollup-plugin-typescript2";
 import { babel } from "@rollup/plugin-babel";
+import copy from "rollup-plugin-copy";
 import pkg from "../package.json";
 
 const moduleName = pkg.name.replace(/^@.*\//, "");
@@ -21,7 +22,7 @@ const banner = `
 `;
 
 export default {
-  input: path.resolve(__dirname, "../src/index.ts"),
+  input: path.resolve(__dirname, "../index.ts"),
   output: [
     {
       file: `dist/${moduleName}.js`,
@@ -74,6 +75,14 @@ export default {
     nodeResolve(),
     commonjs({
       extensions: [".js", ".ts"],
+    }),
+    copy({
+      targets: [
+        {
+          src: ["package.json", "LICENSE", "README.md"],
+          dest: "dist",
+        },
+      ],
     }),
   ],
 };
