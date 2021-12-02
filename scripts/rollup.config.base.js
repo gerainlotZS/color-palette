@@ -61,6 +61,7 @@ export default {
       tsconfig: path.resolve(__dirname, "../tsconfig.json"),
       useTsconfigDeclarationDir: true,
     }),
+    commonjs(),
     babel({
       babelHelpers: "bundled",
       configFile: path.resolve(__dirname, "../.babelrc.js"),
@@ -73,9 +74,6 @@ export default {
       preventAssignment: true,
     }),
     nodeResolve(),
-    commonjs({
-      extensions: [".js", ".ts"],
-    }),
     copy({
       targets: [
         {
